@@ -1,9 +1,15 @@
-import os
-import sys
-from random import seed
-import time
-import numpy as np
-from tabulate import tabulate
+"""
+@author: 12223508
+
+Main script for running and visualizing optimization algorithms on the Rastrigin function.
+"""
+
+import os                       # For output file operations
+import sys                      # For system operations   
+from random import seed         # For random number generation
+import time                     # For measuring execution time
+import numpy as np              # For array operations
+from tabulate import tabulate   # For table formatting
 
 # Add the Code directory to the Python path for modular imports
 current_dir = os.path.dirname(os.path.abspath(__file__))
@@ -12,9 +18,9 @@ sys.path.append(code_dir)
 
 # Import optimization classes
 from RastriginFunction import RastriginFunction
-from Visualizer import Visualizer
 from OnePlusOneESFifthRule import OnePlusOneESFifthRule
-from GradientDescent import GradientDescent  # Import Gradient Descent algorithm
+from GradientDescent import GradientDescent 
+from Visualizer import Visualizer 
 
 # --- Helper function to run and visualize optimization --- #
 def run_and_visualize_optimization(

@@ -1,3 +1,9 @@
+"""
+@author: 12223508
+
+Visualization module for displaying optimization results on benchmark functions.
+"""
+
 import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.patches import Circle

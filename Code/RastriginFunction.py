@@ -1,17 +1,23 @@
-import math
-import numpy as np # Import numpy for array operations
-from random import uniform, seed
+"""
+@author: 12223508
+
+Implementation of the Rastrigin function and its properties.
+"""
+
+import math         # For math operations
+import numpy as np  # For array operations
+from random import uniform, seed 
 
 class RastriginFunction:
     """Class representing the Rastrigin function and its properties"""
     
     def __init__(self):
-        self.A = 10
-        self.min_bound = -5.12  # Minimum bound of the function
-        self.max_bound = 5.12   # Maximum bound of the function
-        self.global_minimum = (0, 0)  # 2D global minimum
-        self.global_minimum_value = 0
-        self.global_minimum_nd = np.zeros(30)  # For n-dimensional cases, the global minimum is at origin (0,0,...,0)
+        self.A = 10                             # Constant for the Rastrigin function
+        self.min_bound = -5.12                  # Minimum bound of the function
+        self.max_bound = 5.12                   # Maximum bound of the function
+        self.global_minimum = (0, 0)            # 2D global minimum
+        self.global_minimum_value = 0           # Value of the global minimum
+        self.global_minimum_nd = np.zeros(30)   # For n-dimensional cases, the global minimum is at origin (0,0,...,0)
         
     def evaluate_1d(self, x):
         """Evaluate the 1D Rastrigin function at point x"""
